@@ -1,0 +1,5 @@
+.git
+.gitignore
+./sipoc_robot_arm/sipoc_ra_solver/results
+./sipoc_mobile_robot/sipoc_mr_solver/include/acados_generated_code/
+./sipoc_robot_arm/sipoc_ra_solver/include/acados_generated_code/

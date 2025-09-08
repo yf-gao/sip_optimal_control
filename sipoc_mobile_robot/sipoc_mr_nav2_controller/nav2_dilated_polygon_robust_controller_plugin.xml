@@ -1,0 +1,9 @@
+<class_libraries>
+    <library path="nav2_dilated_polygon_robust_controller_plugin">
+        <class type="sipoc_mr_nav2_controller::RobustDilatedPolygonController" base_class_type="nav2_core::Controller">
+            <description>
+                nav2_dilated_polygon_robust_controller_plugin
+            </description>
+        </class>
+    </library>
+</class_libraries>

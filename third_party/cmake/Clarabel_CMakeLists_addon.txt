@@ -1,0 +1,14 @@
+
+## copy the header files
+install(DIRECTORY "${PROJECT_SOURCE_DIR}/include/" DESTINATION "include/clarabel")
+
+## install library and targets
+install(FILES
+          ${PROJECT_SOURCE_DIR}/rust_wrapper/target/release/libclarabel_c.a
+          ${PROJECT_SOURCE_DIR}/rust_wrapper/target/release/libclarabel_c.so
+        DESTINATION
+          lib
+)
+
+## install pkgconfig file
+install(FILES ${PROJECT_SOURCE_DIR}/cmake/Clarabel.pc DESTINATION lib/pkgconfig)

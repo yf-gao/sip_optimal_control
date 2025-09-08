@@ -1,0 +1,38 @@
+sia20d_car_seat_mpc_node:
+  ros__parameters:
+    urdf_path: "/urdf/sia20d_car_seat.urdf"
+    env_path: "/meshes/car_seat/car_whole"
+    seat_scale: 0.8
+    mode: "closed_loop"
+    joints_current: [ 2.22, -3.14, 0.50, 0.00, -1.45, 0.00, 0.39, -0.29]
+    ocp:
+      n_hrzn: 20
+      delta_t: 0.1
+    bounds:
+      max_joint_vel: 3.0
+      max_joint_acc: 10.0
+      max_spline_acc: 1.0
+      velopt_factor: 0.95
+    weights:
+      joint_angle: 1.0
+      joint_vel: 1.0
+      joint_acc: 1e-4
+      joint_angle_terminal: 10.
+      joint_vel_terminal: 10.
+
+sia20d_car_seat_planner_node:
+  ros__parameters:
+    urdf_path: "/urdf/sia20d_car_seat.urdf"
+    env_path: "/meshes/car_seat/car_whole"
+    seat_scale: 0.8
+    mode: "ocp"
+    ocp:
+      n_hrzn: 10
+      delta_t: 0.3
+    bounds:
+      max_joint_vel: 3.0
+      max_lin_vel: 1.0
+    weights:
+      joint_angle: 1e-2
+      joint_vel: 1.0
+      joint_angle_terminal: 1.0

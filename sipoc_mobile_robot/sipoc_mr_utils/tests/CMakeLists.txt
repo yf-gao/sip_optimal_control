@@ -1,0 +1,20 @@
+find_package(ament_index_cpp)
+
+add_executable(test_sdf test_signed_distance_map.cpp)
+target_compile_definitions(test_sdf PRIVATE POLYGON_FLAG_VALUE=0)
+target_link_libraries(test_sdf signed_distance_map)
+ament_target_dependencies(test_sdf ament_index_cpp)
+
+add_executable(test_sdf4polygon test_signed_distance_map.cpp)
+target_compile_definitions(test_sdf4polygon PRIVATE POLYGON_FLAG_VALUE=1)
+target_link_libraries(test_sdf4polygon signed_distance_map_for_polygon)
+ament_target_dependencies(test_sdf4polygon ament_index_cpp)
+
+add_executable(test_distance_pt_polygon test_distance_minimizer_point_to_polygon.cpp)
+target_link_libraries(test_distance_pt_polygon distance_point_polygon)
+
+add_executable(test_distance_ellip_polygon test_distance_minimizer_ellipsoid_to_polygon.cpp)
+target_link_libraries(test_distance_ellip_polygon distance_ellip_polygon)
+
+add_executable(test_state_predictor_filter test_state_predictor_filter.cpp)
+target_link_libraries(test_state_predictor_filter state_predictor_filter)

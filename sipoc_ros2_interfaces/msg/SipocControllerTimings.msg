@@ -1,0 +1,8 @@
+std_msgs/Header header
+
+std_msgs/String ocp_formulation
+float64 compute_ref_traj
+float64 prop_disturb
+float64 solve_lower_level
+float64 solve_upper_level
+float64 total

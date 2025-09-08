@@ -1,0 +1,25 @@
+repositories:
+  third_party/manif:
+    type: git
+    url: https://github.com/artivis/manif.git
+    version: ad00494251d8ee2d16c3d3b82a65757c94fc48ec
+
+  third_party/acados:
+    type: git
+    url: https://github.com/boschresearch/acados.git
+    version: bbe9eeb2e41df855995cf44a1385d0c8f0dc8e1d
+
+  third_party/Clarabel.cpp:
+    type: git
+    url: https://github.com/oxfordcontrol/Clarabel.cpp.git
+    version: 0de6259a3edfd5cc041ec42b2148599ce63e73cb
+
+  third_party/coal:
+    type: git
+    url: https://github.com/coal-library/coal.git
+    version: ea8463989265dbb11c7ae0f210451bcb92caa27b
+
+  third_party/OpenVDB:
+    type: git
+    url: https://github.com/AcademySoftwareFoundation/openvdb.git
+    version: 6c044e628a1ac3546eed48b6f5e9c76dfaa2143e

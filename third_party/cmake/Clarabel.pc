@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../..
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Clarabel
+Description: Interior-point solver for convex conic optimisation problems
+URL: https://github.com/oxfordcontrol/Clarabel.rs
+Version: 0.11.1
+Cflags: -I${includedir}
+Libs: -L${libdir} -lclarabel_c
+Requires.private:
