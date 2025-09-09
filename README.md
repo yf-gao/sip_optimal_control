@@ -29,13 +29,14 @@ Such semi-infinite programming (SIP) optimal control problem (OCP) formulation e
 The most straightforward way to get started is with Docker.
 To this end, first install [Docker](https://docs.docker.com/desktop/), and then build the docker image:
 ```bash
+cd <workspace>/src  # replace with your actual ROS2 workspace root directory
 git clone https://github.com/boschresearch/sip_optimal_control.git sipoc
 cd sipoc
 ./build_docker.sh
 ```
 The installation can be lengthy (about 60-90 minutes) and needs around 10 GB of disk space, since many external dependencies are installed.
 You can speed up the build by enabling more parallel threads in CMake, but this would increase memory usage and may lead to out-of-memory errors.
-If you prefer to build the workspace locally, please refer to [the steps of installing without docker](#install-without-docker).
+If you prefer to build the workspace locally, please refer to [the steps of installing without docker](#installation-without-docker).
 
 To run the Docker image:
 ```bash
