@@ -62,7 +62,7 @@ target_include_directories(capsule_nominal_controller PRIVATE "${ACADOS_INCLUDE_
 target_include_directories(capsule_nominal_controller PRIVATE "${ACADOS_INCLUDE_DIR}/blasfeo/include/")
 target_link_libraries(capsule_nominal_controller Eigen3::Eigen MANIF::manif)
 target_link_libraries(capsule_nominal_controller "${ACADOS_LIB_DIR}/libacados.so")
-ament_target_dependencies(capsule_nominal_controller sipoc_mr_utils)
+target_link_libraries(capsule_nominal_controller sipoc_mr_utils::signed_distance_map)
 
 add_library(dilated_polygon_nominal_controller SHARED
     src/dilated_polygon_nominal_controller.cpp src/base_controller.cpp
@@ -87,7 +87,7 @@ target_include_directories(dilated_polygon_nominal_controller PRIVATE "${ACADOS_
 target_link_libraries(dilated_polygon_nominal_controller Eigen3::Eigen MANIF::manif)
 target_link_libraries(dilated_polygon_nominal_controller "${ACADOS_LIB_DIR}/libacados.so")
 target_link_libraries(dilated_polygon_nominal_controller CLARABEL::clarabel)
-ament_target_dependencies(dilated_polygon_nominal_controller sipoc_mr_utils)
+target_link_libraries(dilated_polygon_nominal_controller sipoc_mr_utils::signed_distance_map_for_polygon sipoc_mr_utils::distance_point_polygon)
 
 add_library(dilated_polygon_robust_controller SHARED
     src/dilated_polygon_robust_controller.cpp src/base_controller.cpp
@@ -112,7 +112,7 @@ target_include_directories(dilated_polygon_robust_controller PRIVATE "${ACADOS_I
 target_link_libraries(dilated_polygon_robust_controller Eigen3::Eigen MANIF::manif)
 target_link_libraries(dilated_polygon_robust_controller "${ACADOS_LIB_DIR}/libacados.so")
 target_link_libraries(dilated_polygon_robust_controller CLARABEL::clarabel)
-ament_target_dependencies(dilated_polygon_robust_controller sipoc_mr_utils)
+target_link_libraries(dilated_polygon_robust_controller sipoc_mr_utils::signed_distance_map_for_polygon sipoc_mr_utils::ellip_unc_prop sipoc_mr_utils::distance_point_polygon sipoc_mr_utils::distance_ellip_polygon)
 
 if(BUILD_TESTING)
   add_subdirectory(tests)

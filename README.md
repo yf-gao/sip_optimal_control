@@ -67,7 +67,7 @@ python3  ./src/sipoc/sipoc_mobile_robot/sipoc_mr_solver/py_scripts/main_dilated_
 
 <p float="left">
   <img src=".github/animations/fig_dilated_polygon_nominal_walkway_008.png" width="46%" />
-  <img src=".github/animations/fig_dilated_polygon_nominal_walkway_018.png" width="46%" /> 
+  <img src=".github/animations/fig_dilated_polygon_nominal_walkway_020.png" width="46%" />
 </p>
 
 The world can also be specified as with the capsule-shaped robot.
@@ -77,7 +77,7 @@ python3  ./src/sipoc/sipoc_mobile_robot/sipoc_mr_solver/py_scripts/main_dilated_
 ```
 
 <p float="left">
-  <img src=".github/animations/fig_dilated_polygon_robust_s_corridor_010.png" width="46%" />
+  <img src=".github/animations/fig_dilated_polygon_robust_s_corridor_011.png" width="46%" />
   <img src=".github/animations/fig_dilated_polygon_robust_s_corridor_027.png" width="46%" /> 
 </p>
 A safety margin, optimized within the OCP, is maintained between the robot and the obstacle for constraint robustification.
