@@ -30,7 +30,7 @@ The most straightforward way to get started is with Docker.
 To this end, first install [Docker](https://docs.docker.com/desktop/), and then build the docker image:
 ```bash
 cd <workspace>/src  # replace with your actual ROS2 workspace root directory
-git clone https://github.com/boschresearch/sip_optimal_control.git sipoc
+git clone https://github.com/yf-gao/sip_optimal_control.git sipoc
 cd sipoc
 ./build_docker.sh
 ```
@@ -127,7 +127,7 @@ pip install alphashape
 #### Step 1.2 Clone the repository
 ```bash
 cd <workspace>/src  # replace with your actual ROS2 workspace root directory
-git clone https://github.com/boschresearch/sip_optimal_control.git sipoc
+git clone https://github.com/yf-gao/sip_optimal_control.git sipoc
 cd ../
 vcs import src < src/sipoc/third_party/third_party.repos
 ```
